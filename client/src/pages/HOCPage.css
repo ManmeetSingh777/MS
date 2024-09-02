@@ -1,0 +1,77 @@
+.hoc-container {
+    padding: 100px 40px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('../assets/bgGradient.jpg');
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hoc-header {
+    padding: 100px 80px 80px 40px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .hoc-header h1 {
+    padding: 0px 80px 50px -50px;
+    font-size: 6em !important;
+    font-weight: 400 !important;
+    color: #222 !important; /* Removed the green color */
+    margin: 0 0 20px 0 !important; /* Added some space after the heading */
+    font-family: 'Playfair Display', serif !important;
+    text-align: center !important;
+  }
+  
+  
+  .hoc-section {
+    margin-bottom: 60px;
+  }
+  
+  .hoc-section h2 {
+    font-size: 2em;
+    color: #444;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  
+  .hoc-text-block h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+  }
+  
+  .hoc-text-block p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6em;
+    margin-bottom: 30px;
+  }
+  
+  .hoc-footer {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .hoc-footer h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .hoc-footer p {
+    font-size: 1.2em;
+    color: #666;
+    font-family: 'Raleway', sans-serif;
+  }
+  

@@ -1,0 +1,293 @@
+body, html {
+  margin: 0;
+  
+  width: 100%;
+  height: 100%;
+  font-family: 'Century SchoolBook', 'Garamond', 'PlayFair Display', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.landing-page {
+  width: 100vw;
+  overflow-y: auto;
+  background: url('../assets/bgGradient.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.header-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/HEROBG.webp') no-repeat center center;
+  background-size: cover; /* Make sure the image covers the entire area */
+  background-attachment: fixed; /* This ensures the background image doesn't move when scrolling */
+  background-position: center top;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.centered-text {
+  color: #fff;
+  font-size: 2.5em;
+  font-family: 'PlayFair Display', serif;
+  font-weight: 700;
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 30%;
+  margin-bottom: 40px; /* Add some margin below the tagline */
+  padding: 0 20px; /* Add padding to prevent text from touching the edges on smaller screens */
+  line-height: 1.2;
+}
+
+
+.tagline-container {
+  display: inline-block;
+}
+
+.tagline-word {
+  display: inline-block;
+}
+
+@keyframes revealWord {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) blur(10px); /* Higher blur and offset */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) blur(0);
+  }
+}
+
+.button-container {
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+.appointment-button {
+  padding: 15px 30px;
+  display: none;
+  margin-top: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.appointment-button::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.appointment-button:hover::after {
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  opacity: 1;
+}
+
+.appointment-button:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  padding-top: 0;
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.fstack-section, .specialization-section, .feedback-tree {
+  padding: 100px 20px;
+}
+
+.fstack-section h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.fstack-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fstack-component {
+  margin-top: 60px;
+  width: 80%;
+}
+
+.inspiring-stories {
+  font-family: 'PlayFair Display', serif !important;
+  font-size: 2.5em !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+.specialization-section {
+  padding: 100px 20px;
+  margin: 100px 0;
+}
+
+.specialization-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.specialization-card {
+  width: 200px;
+  height: 300px;
+ backdrop-filter: blur(10px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.choose-therapist-modal{
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect to create the glass-like appearance */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+}
+.choose-therapist-modal::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.choose-therapist-modal:hover::after {
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  opacity: 1;
+}
+
+.choose-therapist-modal:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25); /* Slightly more opaque on hover */
+}
+
+.feedback-card {
+  width: 80%;
+  margin-top: 30px;
+}
+/* Glass-like button styles */
+.choose-therapist-button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect to create the glass-like appearance */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.choose-therapist-button::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.choose-therapist-button:hover::after {
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  opacity: 1;
+}
+
+.choose-therapist-button:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25); /* Slightly more opaque on hover */
+}
+
+
+@media (max-width: 768px) {
+  .choose-therapist-button {
+    margin-left: 10px; /* Adjust this value to move the button to the left */
+    
+  }
+} 
+@media (max-width: 768px) {
+  .header-section {
+    background: url('../assets/HEROBGM.webp') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .centered-text {
+    font-size: 2em; /* Adjust the font size for mobile */
+    margin-bottom: 20px; /* Adjust the margin for mobile */
+    margin-top: 55%;
+  }
+}
+.section-heading {
+  font-family: 'PlayFair Display', serif !important;
+  font-size: 2.5em !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
