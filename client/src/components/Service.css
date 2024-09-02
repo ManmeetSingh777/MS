@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 1140px;
+  max-width: 80%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+header a {
+  color: #eee;
+  margin-right: 40px;
+}
+
+/* custom-carousel */
+.custom-carousel {
+  height: 120vh;
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.custom-carousel .custom-list .custom-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.custom-carousel .custom-list .custom-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.custom-carousel .custom-list .custom-item .custom-content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.custom-carousel .custom-list .custom-item .custom-author {
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.custom-carousel .custom-list .custom-item .custom-title,
+.custom-carousel .custom-list .custom-item .custom-topic {
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.custom-carousel .custom-list .custom-item .custom-topic {
+  color: #f1683a;
+}
+
+.custom-carousel .custom-list .custom-item .custom-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.custom-carousel .custom-list .custom-item .custom-buttons button {
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.custom-carousel .custom-list .custom-item .custom-buttons button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #eee;
+}
+
+/* custom-thumbnail */
+.custom-thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.custom-thumbnail .custom-item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.custom-thumbnail .custom-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.custom-thumbnail .custom-item .custom-content {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.custom-thumbnail .custom-item .custom-title {
+  font-weight: 500;
+}
+
+.custom-thumbnail .custom-item .custom-description {
+  font-weight: 300;
+}
+
+/* custom-arrows */
+.custom-arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.custom-arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.custom-arrows button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* animation */
+.custom-carousel .custom-list .custom-item:nth-child(1) {
+  z-index: 1;
+}
+
+/* animation text in first item */
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-author,
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-title,
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-topic,
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-des,
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showCustomContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showCustomContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-title {
+  animation-delay: 1.2s !important;
+}
+
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-topic {
+  animation-delay: 1.4s !important;
+}
+
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-des {
+  animation-delay: 1.6s !important;
+}
+
+.custom-carousel .custom-list .custom-item:nth-child(1) .custom-content .custom-buttons {
+  animation-delay: 1.8s !important;
+}
+
+/* create animation when next click */
+.custom-carousel.next .custom-list .custom-item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showCustomImage 0.5s linear 1 forwards;
+}
+
+@keyframes showCustomImage {
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.custom-carousel.next .custom-thumbnail .custom-item:nth-last-child(1) {
+  overflow: hidden;
+  animation: showCustomThumbnail 0.5s linear 1 forwards;
+}
+
+.custom-carousel.prev .custom-list .custom-item img {
+  z-index: 100;
+}
+
+@keyframes showCustomThumbnail {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.custom-carousel.next .custom-thumbnail {
+  animation: effectCustomNext 0.5s linear 1 forwards;
+}
+
+@keyframes effectCustomNext {
+  from {
+    transform: translateX(150px);
+  }
+}
+
+/* running time */
+.custom-carousel .custom-time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: #f1683a;
+  left: 0;
+  top: 0;
+}
+
+.custom-carousel.next .custom-time,
+.custom-carousel.prev .custom-time {
+  animation: runningCustomTime 3s linear 1 forwards;
+}
+
+@keyframes runningCustomTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* prev click */
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) {
+  z-index: 2;
+}
+
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) img {
+  animation: outCustomFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes outCustomFrame {
+  to {
+    width: 150px;
+    height: 220px;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+  }
+}
+
+.custom-carousel.prev .custom-thumbnail .custom-item:nth-child(1) {
+  overflow: hidden;
+  opacity: 0;
+  animation: showCustomThumbnail 0.5s linear 1 forwards;
+}
+
+.custom-carousel.next .custom-arrows button,
+.custom-carousel.prev .custom-arrows button {
+  pointer-events: none;
+}
+
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) .custom-content .custom-author,
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) .custom-content .custom-title,
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) .custom-content .custom-topic,
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) .custom-content .custom-des,
+.custom-carousel.prev .custom-list .custom-item:nth-child(2) .custom-content .custom-buttons {
+  animation: contentCustomOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentCustomOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .custom-carousel .custom-list .custom-item .custom-content {
+    padding-right: 0;
+  }
+
+  .custom-carousel .custom-list .custom-item .custom-content .custom-title {
+    font-size: 30px;
+  }
+}
+.offer-section {
+  text-align: center;
+  margin: 40px 0; /* Adjust margin to position the heading correctly */
+}
+
+.offer-heading {
+  font-size: 2.5em; /* Adjust font size for emphasis */
+  font-weight: bold;
+  color: #333; /* Adjust color to match your design */
+}
+
+@media screen and (max-width: 768px) {
+  .custom-carousel.next .custom-list .custom-item:nth-child(1) {
+    transform: scale(1.05); /* Slightly enlarge the card for emphasis */
+    transition: transform 0.8s ease-in-out, width 0.8s ease-in-out, height 0.8s ease-in-out; /* Smoother transition */
+  }
+
+  .custom-carousel.next .custom-thumbnail .custom-item:nth-last-child(1),
+  .custom-carousel.prev .custom-thumbnail .custom-item:nth-child(1) {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Smooth fade and movement */
+  }
+
+  /* Ensure smooth scaling when a card is selected */
+  .custom-carousel .custom-list .custom-item:nth-child(1) {
+    transform: scale(1);
+    transition: transform 0.8s ease-in-out, top 0.8s ease-in-out; /* Smooth scaling for active card */
+  }
+
+  /* Additional Smoothing for Exiting Cards */
+  .custom-carousel.prev .custom-list .custom-item:nth-child(2) {
+    transform: translateY(-50px);
+    transition: transform 0.8s ease-in-out; /* Smoother transition when leaving the frame */
+  }
+}
+

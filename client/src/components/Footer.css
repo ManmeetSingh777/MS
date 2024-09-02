@@ -1,0 +1,159 @@
+.footer {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect for glass-like appearance */
+  padding: 40px 20px;
+  color: #fff; /* Light text color */
+  font-family: Arial, sans-serif;
+  margin-top: 100px; /* Add some space between the slider and the footer */
+  border-radius: 10px; /* Optional: Rounded corners for a softer look */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: A subtle border */
+}
+
+.footer-top {
+  border-bottom: 1px solid #555;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subscribe-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.subscribe-text {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background-color: #FFD700;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-middle, .footer-bottom {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker transparent background for sections */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+  margin: 10px 20px;
+  text-align: left;
+}
+
+.footer-column h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FFD700; /* Golden color */
+  text-align: center; /* Center align the h3 headings */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.app-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the app links */
+  margin-left: 10px;
+}
+
+.app-links a {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  margin-right: 20px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin-right: 10px;
+  background-color: #fff; /* White background */
+  padding: 10px;
+  border-radius: 50%; /* Circular background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.social-links a img {
+  width: 20px;
+  height: 20px;
+}
+
+.language-select {
+  margin-top: 10px;
+}
+
+.language-select select {
+  padding: 5px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+}

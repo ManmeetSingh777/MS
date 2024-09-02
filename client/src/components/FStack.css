@@ -1,0 +1,100 @@
+/* Existing CSS */
+.f-stack {
+  position: relative;
+  height: 350px; /* Smaller stack height */
+  width: 500px; /* Smaller stack width */
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.f {
+  position: absolute;
+  height: 350px; /* Adjusted height */
+  width: 500px; /* Adjusted width */
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: top 0.5s ease, transform 0.5s ease, z-index 0.5s ease;
+}
+
+.f-content {
+  flex: 1;
+  font-size: 1.5rem; /* Smaller font size */
+  color: #333;
+}
+
+.f-content mark.highlight {
+  background-color: rgba(70, 130, 180, 0.2); /* Light blue background */
+  color: #4682B4; /* Blue text color */
+}
+
+.f-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.f-name {
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: 500;
+  color: #555;
+}
+
+.f-designation {
+  font-size: 1.2rem; /* Adjusted font size */
+  color: #888;
+}
+
+.fstack-section .inspiring-stories {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px; /* Add some spacing below the heading */
+}
+
+.fstack-section h2 {
+  display: none; /* Hide the 'Still in doubt?' heading */
+}
+
+.fstack-component {
+  margin-top: 0; /* Remove unnecessary top margin */
+  width: 80%; /* Adjust width to make it more responsive */
+  max-width: 600px; /* Set a max width to prevent overflow on larger screens */
+  margin: 0 auto; /* Center the FStack */
+}
+
+/* New Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .f-stack {
+    height: 250px; /* Reduce stack height for mobile */
+    width: 90%; /* Set width to 90% of the screen width */
+  }
+
+  .f {
+    height: 250px; /* Adjust height for mobile */
+    width: 100%; /* Make the stack width 100% of its container */
+  }
+
+  .f-content {
+    font-size: 1rem; /* Reduce font size for mobile */
+  }
+
+  .f-footer {
+    margin-top: 10px; /* Reduce margin for mobile */
+  }
+
+  .f-name {
+    font-size: 1.2rem; /* Reduce font size for mobile */
+  }
+
+  .f-designation {
+    font-size: 1rem; /* Reduce font size for mobile */
+  }
+
+  .fstack-component {
+    width: 100%; /* Make the component width 100% */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
