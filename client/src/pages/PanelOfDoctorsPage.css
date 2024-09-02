@@ -1,0 +1,74 @@
+.panel-doctors-container {
+    background-image: url('../assets/background-texture.webp'); 
+    margin-top: 2%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .panel-doctors-heading {
+    font-size: 2.5em;
+    color: #2F4F4F;
+    margin-bottom: 30px;
+  }
+  
+  .image-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .image-collage img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .panel-content {
+    font-size: 1.2em;
+    color: #4F4F4F;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .panel-doctors-heading {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    .image-collage {
+      grid-template-columns: repeat(2, 1fr); /* Change to 2 columns for smaller screens */
+      grid-gap: 8px;
+    }
+  
+    .panel-content {
+      font-size: 1em;
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .panel-doctors-heading {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+  
+    .image-collage {
+      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for mobile */
+      grid-gap: 5px;
+    }
+  
+    .image-collage img {
+      border-radius: 4px;
+    }
+  
+    .panel-content {
+      font-size: 0.9em;
+      padding: 0 5px;
+    }
+  }
+  

@@ -1,0 +1,86 @@
+.therapist-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Adjust color to match your design */
+}
+  
+.therapist-container {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  
+.therapist-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.therapist-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+  
+.therapist-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+  
+.therapist-info h3 {
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+  
+.therapist-email {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
+  
+.therapist-email a {
+    color: #007bff;
+    text-decoration: none;
+}
+  
+.therapist-email a:hover {
+    text-decoration: underline;
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+.therapist-qualifications {
+    margin-top: 20px;
+    text-align: left;
+}
+  
+.therapist-description {
+    margin-top: 20px;
+}
+  
+.book-appointment-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+  
+.book-appointment-button:hover {
+    background-color: #218838;
+}

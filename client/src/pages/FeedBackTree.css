@@ -1,0 +1,90 @@
+.feedback-tree-section {
+  display: flex;
+  padding: 50px 20px;
+  background-color: transparent;
+}
+
+.tree-container {
+  position: relative;
+  width: 50%; 
+}
+
+.tree-image {
+  width: 100%;
+  max-width: 600px;
+}
+
+.circle {
+  position: absolute;
+  border: 4px solid #FFD700; 
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.central-circle {
+  width: 120px;
+  height: 120px;
+  top: 45%; /* Adjust this value to fine-tune the vertical position */
+  left: 44%; 
+  transform: translateX(-50%);
+  border: 6px solid #FFD700;
+  z-index: 5;
+  /* No transition effect for central circle */
+}
+
+.small-circle {
+  width: 60px; 
+  height: 60px;
+  border: 3px solid #FFD700; 
+}
+
+.small-circle.active,
+.small-circle:hover {
+  transform: scale(1.5); /* Scale up when clicked or hovered */
+  z-index: 10; /* Bring the active image to the front */
+}
+
+/* Positioning the smaller circles inside the tree area */
+.circle1 { top: 20%; left: 45%;  }
+.circle2 { top: 35%; left: 50%; }
+.circle3 { top: 40%; left: 20%; }
+.circle4 { top: 23%; left: 55%; }
+.circle5 { top: 35%; left: 35%; }
+.circle6 { top: 25%; left: 15%; }
+.circle7 { top: 20%; left: 28%; }
+.circle8 { top: 10%; left: 35%; }
+.circle9 { top: 43%; left: 59%; }
+.circle10 { top: 60%; left: 16%; }
+
+.feedback-display {
+  width: 500px; 
+  height: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 30px;
+  margin-top: 50px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feedback-tree-heading {
+  font-size: 2.5em; /* Adjust the size as needed */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px; /* Add space between heading and tree */
+}
+@media (max-width: 768px) {
+  .feedback-tree-section {
+    display: none; /* Hide the feedback tree on mobile devices */
+  }
+}

@@ -1,0 +1,125 @@
+.zehen-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 85px 40px 40px 40px;
+  background-image: url('../assets/bgGradient.jpg');
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.zehen-header {
+text-align: center;
+margin-top: 50px;
+}
+
+.zehen-header h1 {
+font-size: 6em;
+font-weight: 400;
+color: #222;
+margin: 0 0 20px 0;
+font-family: 'Playfair Display', serif;
+}
+
+.zehen-section {
+margin-bottom: 60px;
+}
+
+.zehen-section h2 {
+font-size: 2.5em;
+color: #444;
+margin-top: 55px;
+margin-bottom: 20px;
+border-bottom: 2px solid #ddd;
+padding-bottom: 10px;
+font-family: 'Playfair Display', serif;
+font-weight: 600;
+}
+
+.zehen-text-block p {
+font-size: 1.1em;
+color: #555;
+line-height: 1.6em;
+margin-bottom: 30px;
+}
+
+.zehen-text-block ul {
+list-style-type: disc;
+margin-left: 20px;
+}
+
+.zehen-text-block ul li {
+margin-bottom: 10px;
+}
+
+/* Collage Styles */
+.zehen-collage {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+margin-top: 20px;
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.zehen-collage-image {
+width: 100%;
+height: auto;
+object-fit: cover;
+border-radius: 8px;
+}
+
+/* Footer */
+.zehen-footer {
+text-align: center;
+margin-top: 60px;
+}
+
+.zehen-footer h2 {
+font-size: 2em;
+color: #333;
+margin-top: 55px;
+margin-bottom: 10px;
+font-family: 'Playfair Display', serif;
+}
+
+.zehen-footer p {
+font-size: 1.2em;
+color: #666;
+font-family: 'Raleway', sans-serif;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+.zehen-header h1 {
+  font-size: 3em;
+}
+
+.zehen-section h2 {
+  font-size: 2em;
+}
+
+.zehen-text-block p, .zehen-text-block ul li {
+  font-size: 1em;
+}
+
+.zehen-container {
+  padding: 10px;
+}
+
+.zehen-collage {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  width: 100%;
+}
+
+.zehen-footer h2 {
+  font-size: 1.5rem;
+}
+
+.zehen-footer p {
+  font-size: 0.9rem;
+}
+}
