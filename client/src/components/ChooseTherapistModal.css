@@ -1,0 +1,35 @@
+/* ChooseTherapistModal.css */
+.choose-therapist-modal {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 999;
+  padding: 15px 30px;
+  background-color: #ff6b6b;
+  color: white;
+  font-family: 'Century SchoolBook', 'Garamond', 'PlayFair Display', sans-serif;
+  font-size: 1.5em;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choose-therapist-modal p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.choose-therapist-modal:hover {
+  background-color: #ff4c4c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .choose-therapist-modal {
+      right: auto; /* Remove the right positioning */
+      left: 60px; /* Position it 10px from the left */
+      transform: translateX(-10px); /* Adjust this value to move further left */
+  }
+}

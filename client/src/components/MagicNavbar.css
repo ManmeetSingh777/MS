@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 70px; /* Prevent content from being hidden behind the fixed navbar */
+  background: transparent ;
+  background-size: cover; /* Make sure the texture covers the entire background */
+}
+
+.navigation {
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0); /* Make the navbar background transparent */
+  backdrop-filter: blur(10px); /* Retain the blur effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0px; /* Sticks the navbar to the top of the viewport */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.logo img {
+  height: 50px; /* Adjust the height as needed */
+}
+
+ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 60px;
+  background: transparent;
+  border-radius: 30px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  z-index: 1000;
+  color: #444;
+}
+
+ul li a ion-icon,
+ul li a .nav-svg-icon {
+  font-size: 2em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+ul li a .nav-svg-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+ul li:hover a ion-icon,
+ul li:hover a .nav-svg-icon {
+  color: #41f6c2;
+  filter: drop-shadow(0 0 15px #41f6c2);
+}
+
+ul li.active a ion-icon,
+ul li.active a .nav-svg-icon {
+  color: #41f6c2;
+  transform: translateY(-20px); /* Adjusted to come down a little */
+  filter: drop-shadow(0 0 15px #41f6c2);
+}
+
+#marker {
+  position: absolute;
+  top: 12px;
+  transition: 0.5s;
+  z-index: 1;
+  width: 60px; /* Make the marker a bit smaller in width */
+  height: 60px;
+  border-radius: 20px;
+  background: rgba(255, 192, 203, 0.4); /* Glass effect with a tint of pink */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 192, 203, 0.5); /* Subtle border */
+}
+
+#marker span {
+  position: absolute;
+  top: 80px;
+  width: 120px;
+  left: -26px;
+  height: 20px;
+  background: rgba(255, 192, 203, 0.4); /* Glass effect with a tint of pink */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 192, 203, 0.5); /* Subtle border */
+  border-bottom: 1px solid #c7f80d;
+  border-right: 1px solid #c7f80d;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-radius: 20px;
+}
+
+span.nav-text {
+  position: absolute;
+  pointer-events: none;
+  transform: translateY(40px);
+  opacity: 0;
+  font-size: 0.8em;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+ul li.active a span.nav-text {
+  transform: translateY(47px);
+  opacity: 1;
+  color: #043134;
+  filter: drop-shadow(0 0 10px #279ca4);
+}
+
+.logo {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.logo img {
+  height: 120px;
+}
+
+main {
+  padding: 0;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.user-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.login-button {
+  background-color: #41f6c2;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #36c4a6;
+}
+
+/* Profile icon */
+.profile {
+  position: relative;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px; /* Adjust this value as needed */
+  right: -20px; /* Adjust this value to move the menu further to the right */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  color: black; /* Change text color to black */
+}
+
+.dropdown-menu button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Centering menu items */
+.navigation .menu-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  margin-right: auto;
+}
+ul li:hover a .nav-svg-icon {
+  color: #41f6c2;
+  filter: drop-shadow(0 0 15px #41f6c2);
+  fill: currentColor; /* Ensure the SVG fill color changes on hover */
+}
+
+ul li.active a .nav-svg-icon {
+  color: #41f6c2;
+  fill: currentColor; /* Ensure the SVG fill color changes when active */
+}

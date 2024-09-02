@@ -1,0 +1,91 @@
+.specialization-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.specialization-section .section-heading {
+  font-family: 'PlayFair Display', serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.therapist-card {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.therapist-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.therapist-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.therapist-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.therapist-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: white;
+}
+
+.see-all {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.see-all-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-all-button:hover {
+  background-color: #0056b3;
+}
