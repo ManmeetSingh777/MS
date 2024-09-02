@@ -37,6 +37,9 @@ const adminRouter = require('./routes/admin');
 
 
 // Use routes
+app.use("/",(req,res)=>{
+  res.send("Welcome")
+})
 app.use('/api/therapists', therapistsRouter);
 app.use('/api/appointments', appointmentsRouter);
 app.use('/auth', authRouter);
