@@ -1,10 +1,17 @@
 import React from 'react';
 import './AboutUsPage.css';
 import bgImage from '../assets/AboutUsBG.webp'; // Ensure this is the correct path to your image
+import { useNavigate } from 'react-router-dom';
+
+
 
 const AboutUs = () => {
+
+  const navigate = useNavigate();
+
   const handleOpenPage = (path) => {
-    window.location.href = path;
+    // window.location.href = path;
+    navigate(path);
   };
 
   return (
