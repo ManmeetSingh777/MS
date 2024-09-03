@@ -8,7 +8,7 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA7QNAlW2lB1e7PkzwyX9t9ShzVbV66o7M",
-  authDomain: "https://ms211.netlify.app/",
+  authDomain: "mind-studio-ac63c.firebaseapp.com",
   projectId: "mind-studio-ac63c",
   storageBucket: "mind-studio-ac63c.appspot.com",
   messagingSenderId: "802922998971",
